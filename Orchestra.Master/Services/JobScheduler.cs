@@ -38,7 +38,7 @@ public class JobScheduler : BackgroundService
             await db.SaveChangesAsync(stoppingToken);
         }
 
-        await Task.Delay(2000, stoppingToken); // poll every 2 seconds
+        await Task.Delay(2000, stoppingToken); 
     }
 }
 
