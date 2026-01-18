@@ -38,11 +38,6 @@ public class JobScheduler : BackgroundService
             await db.SaveChangesAsync(stoppingToken);
         }
 
-        // Remove these lines:
-        // job.Status = JobStatus.Assigned;
-        // job.AssignedWorker = _workerInfo.WorkerId;
-        // await db.SaveChangesAsync(stoppingToken);
-
         await Task.Delay(2000, stoppingToken); // poll every 2 seconds
     }
 }
