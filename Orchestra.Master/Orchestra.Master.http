@@ -1,0 +1,6 @@
+@Orchestra.Master_HostAddress = http://localhost:5216
+
+GET {{Orchestra.Master_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

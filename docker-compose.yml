@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  master:
+    image: orchestra-master
+    build:
+      context: ./Orchestra.Master
+    ports:
+      - "5216:5216"
+
+  worker:
+    image: orchestra-worker
+    build:
+      context: ./Orchestra.Worker
+    depends_on:
+      - master
